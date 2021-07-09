@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Le jeu du plus grand sous graphe connexe</title>
+    <script
+      type="text/javascript"
+      src="vis-network.js"
+    ></script>
+    <link 
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body>
+    <div id="create_graph">
+      <button id="create" class="glow-on-hover" onclick="createArrayAux()" >GENERER</button>
+      <button id="reset" class="glow-on-hover" onclick="allReset()">RESET</button>
+      <button id="whoWins" class="glow-on-hover" onclick="whoWins()">QUI A GAGNE ?</button>
+    </div>
+    <div id="control">
+      <label for="myRange">Veuillez choisir la taille du graphe: </label>
+      <input id ="myRange"type="range" name="taille" min="1" max="10" value="5" oninput="document.getElementById('size').textContent=value">
+      <span id="size"> </span>
+
+
+      <div>
+        <p>Veuillez choisir la forme du graphe:</p>
+        <label for="case1">Carré</label>
+        <input type="radio" id="case1" name="groupe1" value="case_1" checked>
+      </div>
+
+      <div>
+        <label for="case2">Binomial</label>
+        <input type="radio" id="case2" name="groupe1" value="case_2">
+  
+      </div>
+
+      <div>
+        <label for="case3">Aléatoire (test)</label>
+        <input type="radio" id="case3" name="groupe1" value="case_3">
+  
+      </div>
+      
+    </div>
+    <div>
+      <p id="afficheTour">Au tour de :</p>
+    </div>
+    <p id="player">Joueur 1 : Rouge</p>
+    <div id="mynetwork"></div>
+
+
+    <script 
+      type="text/javascript"
+      src="script.js"
+    ></script>
+  </body>
+</html>
