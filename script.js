@@ -68,7 +68,7 @@ function createArray(n) {
         nodes: nodes,
         edges: edges,
       };
-
+      // setting options
       var options = {
         nodes: {
           shape: "dot",
